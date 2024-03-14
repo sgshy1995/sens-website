@@ -1,0 +1,272 @@
+.menu-drawer{
+  width: 488px !important;
+
+  .el-drawer__body{
+    width: 100%;
+    padding: 21px 29px;
+  }
+}
+
+.bl-banner-in-drawer{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .bl-banner-in-drawer-menu{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+
+    .bl-banner-in-drawer-menu-left{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .bl-banner-in-drawer-menu-left-icon{
+        width: 26px;
+        height: 26px;
+        margin-right: 19px;
+
+        &.is-active{
+          display: none;
+        }
+      }
+
+      > span {
+        font-size: 26px;
+        font-family: Microsoft YaHei, Microsoft YaHei, sans-serif;
+        font-weight: 400;
+        color: #333;
+      }
+    }
+
+    .bl-banner-in-drawer-menu-right{
+      width: 24px;
+      height: 24px;
+
+      &.is-active{
+        display: none;
+      }
+    }
+
+    &.is-active{
+
+      .bl-banner-in-drawer-menu-left{
+
+        > span {
+          color: #FA9E4C;
+        }
+
+        .bl-banner-in-drawer-menu-left-icon{
+          display: none;
+
+          &.is-active{
+            display: inline-block;
+          }
+        }
+      }
+
+      .bl-banner-in-drawer-menu-right{
+        display: none;
+
+        &.is-active{
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  .bl-banner-in-drawer-menu-submenu{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 76px;
+    padding-left: 45px;
+    position: relative;
+
+    &::after{
+      display: block;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 1px;
+      width: 407px;
+      background: #E6E6E6;
+      content: ' ';
+    }
+
+    .bl-banner-in-drawer-menu-submenu-left{
+      font-size: 22px;
+      font-family: Microsoft YaHei, Microsoft YaHei, sans-serif;
+      font-weight: 400;
+      color: #333;
+    }
+
+    .bl-banner-in-drawer-menu-submenu-right{
+      width: 24px;
+      height: 24px;
+
+      &.is-active{
+        display: none;
+      }
+    }
+
+    &.is-active{
+
+      .bl-banner-in-drawer-menu-submenu-left{
+        color: #FA9E4C;
+      }
+
+      .bl-banner-in-drawer-menu-submenu-right{
+        display: none;
+
+        &.is-active{
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  .bl-banner-in-drawer-menu-submenu-title{
+    width: 100%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    padding-left: 45px;
+
+    > span {
+      font-size: 20px;
+      font-family: Microsoft YaHei, Microsoft YaHei, sans-serif;
+      font-weight: bold;
+      color: #333333;
+    }
+
+    &.is-active{
+
+      > span {
+        color: #FA9E4C;
+      }
+    }
+  }
+}
+
+.menu-popper{
+  border-radius: 0 !important;
+
+  .el-menu{
+    padding: 0 !important;
+    border-radius: 0 !important;
+    border-color: transparent !important;
+
+    .el-menu-item{
+      background: #fff;
+      font-size: 14px !important;
+      font-family: Microsoft YaHei, Microsoft YaHei, sans-serif;
+      font-weight: 400;
+      color: #333 !important;
+      height: 60px !important;
+      border-color: transparent !important;
+      position: relative;
+      z-index: 2;
+
+      .menu-item-in{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 100%;
+
+        > span {
+          font-size: 14px !important;
+          font-family: Microsoft YaHei, Microsoft YaHei, sans-serif;
+          font-weight: 400;
+        }
+      }
+
+      .icon-go{
+        fill: #333;
+        width: 18px;
+        height: 18px;
+        transition: all 0.3s;
+        margin-left: 12px;
+      }
+
+      @keyframes width-grow {
+        0% {
+          width: 0;
+        }
+        100% {
+          width: 100%;
+        }
+      }
+
+      &:hover{
+        background: #E88A03 !important;
+        color: #fff !important;
+
+        .icon-go{
+          fill: #fff !important;
+        }
+      }
+
+      &.is-active{
+        background: #E88A03 !important;
+        color: #fff !important;
+
+        .icon-go{
+          fill: #fff !important;
+        }
+      }
+    }
+
+    .el-sub-menu{
+
+      .el-sub-menu__title{
+        background: #fff;
+        color: #333 !important;
+        font-size: 14px !important;
+        font-family: Microsoft YaHei, Microsoft YaHei, sans-serif;
+        font-weight: 400;
+        height: 60px !important;
+        border-color: transparent !important;
+        position: relative;
+        z-index: 2;
+
+        > div {
+          > span {
+            font-size: 14px !important;
+            font-family: Microsoft YaHei, Microsoft YaHei, sans-serif;
+            font-weight: 400;
+          }
+        }
+      }
+
+      &:hover{
+        .el-sub-menu__title{
+          background: #E88A03 !important;
+          color: #fff !important;
+
+          .icon-go{
+            fill: #fff !important;
+          }
+        }
+      }
+
+      &.is-active{
+        .el-sub-menu__title{
+          background: #E88A03 !important;
+          color: #fff !important;
+
+          .icon-go{
+            fill: #fff !important;
+          }
+        }
+      }
+    }
+  }
+}
