@@ -26,8 +26,8 @@
       <span>北京赴康科技有限公司版权所有</span>
       <div>
         <a href="https://beian.miit.gov.cn/" target="_blank"> 京ICP备2023005211号</a>
-<!--        <img src="~/assets/images/police.png" alt="police">
-        <a href="https://beian.mps.gov.cn/#/query/webSearch?code=37021202000301" target="_blank">鲁公网安备 37021202000301号</a>-->
+        <img src="~/assets/images/police.png" alt="police">
+        <a href="https://beian.mps.gov.cn/#/query/webSearch?code=11011402053999" target="_blank">京公网安备11011402053999号</a>
       </div>
     </div>
   </section>
