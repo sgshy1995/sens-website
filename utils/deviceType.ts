@@ -37,53 +37,61 @@ export function deviceType(UA: string) {
         if (isIOS(UA)) {
             if (isWechat(UA)) {
                 return {
-                    type: "ios",
+                    type: "mobile",
+                    os: "ios",
                     env: "wechat",
                     masklayer: true,
                 };
             }
             if (isWeibo(UA)) {
                 return {
-                    type: "ios",
+                    type: "mobile",
+                    os: "ios",
                     env: "weibo",
                     masklayer: true,
                 };
             }
             if (isQQ(UA)) {
                 return {
-                    type: "ios",
+                    type: "mobile",
+                    os: "ios",
                     env: "qq",
                     masklayer: true,
                 };
             }
             return {
-                type: "ios",
+                type: "mobile",
+                os: "ios",
             };
         }
         if (isAndroid(UA)) {
             if (isWechat(UA)) {
                 return {
-                    type: "android",
+                    type: "mobile",
+                    os: "android",
                     env: "wechat",
                     masklayer: true,
                 };
             }
             if (isWeibo(UA)) {
                 return {
-                    type: "android",
+                    type: "mobile",
+                    os: "android",
                     env: "weibo",
                     masklayer: true,
                 };
             }
             if (isQQ(UA)) {
                 return {
-                    type: "android",
+                    type: "mobile",
+                    os: "android",
                     env: "qq",
                     masklayer: true,
                 };
             }
             return {
-                type: "android",
+                type: "mobile",
+                os: "android",
             };
         }
 
