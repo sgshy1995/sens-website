@@ -24,7 +24,7 @@
 
     <div class="fk-downloads-title">
       <div class="fk-downloads-title-in">赴康云健康APP</div>
-      <div class="fk-downloads-title-version">Version 1.0.5</div>
+      <div class="fk-downloads-title-version">Version 1.0.6</div>
       <div class="fk-downloads-title-time">发布时间: 2024-05-24</div>
     </div>
 
@@ -56,11 +56,11 @@
     </div>
 
     <div class="fk-downloads-items">
-      <a class="fk-downloads-items-ios" href="itms-services://?action=download-manifest&url=https://fkcdn.cn/cdn/resource/manifest-1.0.5.plist">
+      <a class="fk-downloads-items-ios" href="itms-services://?action=download-manifest&url=https://fkcdn.cn/cdn/resource/manifest-1.0.6.plist">
         <img src="~/assets/images/ios.svg" alt="ios">
         <span>点击下载IOS</span>
       </a>
-      <a class="fk-downloads-items-android" href="https://fkcdn.cn/cdn/resource/FkHealthy-1.0.5.apk" target="_blank">
+      <a class="fk-downloads-items-android" href="https://fkcdn.cn/cdn/resource/FkHealthy-1.0.6.apk" target="_blank">
         <img src="~/assets/images/android.svg" alt="android">
         <span>点击下载Android</span>
       </a>
