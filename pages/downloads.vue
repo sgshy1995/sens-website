@@ -24,8 +24,8 @@
 
     <div class="fk-downloads-title">
       <div class="fk-downloads-title-in">赴康云健康APP</div>
-      <div class="fk-downloads-title-version">Version 1.0.33</div>
-      <div class="fk-downloads-title-time">发布时间: 2024-05-21</div>
+      <div class="fk-downloads-title-version">Version 1.0.5</div>
+      <div class="fk-downloads-title-time">发布时间: 2024-05-24</div>
     </div>
 
     <div class="fk-downloads-log">
@@ -40,15 +40,11 @@
         <tbody>
         <tr>
           <th scope="row">1</th>
-          <td>修复了登录后有可能返回登录页的BUG</td>
+          <td>添加了康复处方的标签功能</td>
         </tr>
         <tr>
           <th scope="row">2</th>
-          <td>修复了字体放大缩小可能导致的页面错乱</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>更新了配置文件</td>
+          <td>修复了一些BUG</td>
         </tr>
         </tbody>
       </table>
@@ -60,11 +56,11 @@
     </div>
 
     <div class="fk-downloads-items">
-      <a class="fk-downloads-items-ios" href="itms-services://?action=download-manifest&url=https://fkcdn.cn/cdn/resource/manifest-1.0.33.plist">
+      <a class="fk-downloads-items-ios" href="itms-services://?action=download-manifest&url=https://fkcdn.cn/cdn/resource/manifest-1.0.5.plist">
         <img src="~/assets/images/ios.svg" alt="ios">
         <span>点击下载IOS</span>
       </a>
-      <a class="fk-downloads-items-android" href="https://fkcdn.cn/cdn/resource/FkHealthy-1.0.3.apk" target="_blank">
+      <a class="fk-downloads-items-android" href="https://fkcdn.cn/cdn/resource/FkHealthy-1.0.5.apk" target="_blank">
         <img src="~/assets/images/android.svg" alt="android">
         <span>点击下载Android</span>
       </a>
