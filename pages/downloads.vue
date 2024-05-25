@@ -60,7 +60,7 @@
         <img src="~/assets/images/ios.svg" alt="ios">
         <span>点击下载IOS</span>
       </a>
-      <a class="fk-downloads-items-android" href="https://fkcdn.cn/cdn/resource/FkHealthy-1.0.6.apk" target="_blank">
+      <a class="fk-downloads-items-android" href="https://fkcdn.cn/cdn/resource/FkHealthy-1.0.61.apk" target="_blank">
         <img src="~/assets/images/android.svg" alt="android">
         <span>点击下载Android</span>
       </a>
