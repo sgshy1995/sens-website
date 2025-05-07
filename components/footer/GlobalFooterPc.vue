@@ -7,7 +7,7 @@
       <div class="sens-footer-right">
         <div>
           <span>公司地址</span>
-          <span>中国 · 北京 昌平区科星西路106号院4号楼14层1407</span>
+          <span>中国 · 北京 海淀区北下关街道枫蓝国际B座409A</span>
           <span>102208</span>
         </div>
         <div>
@@ -18,7 +18,7 @@
         <div>
           <span>技术咨询</span>
           <span>电话：15589807093</span>
-          <span>邮箱：singlesaulwork@gmail.com</span>
+          <span>邮箱：singlesaul@163.com</span>
         </div>
       </div>
     </div>

@@ -21,6 +21,39 @@
     <!--  Title  -->
     <div class="sens-index-pc-title">
       <div class="sens-index-pc-title-in">
+        <span>环境展示</span>
+      </div>
+    </div>
+
+    <div class="sens-index-pc-content">
+      <div class="swiper-container swiper-container-noselect">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" ref="Slide0">
+            <img src="~/assets/images/home/p1.jpg" alt="img">
+          </div>
+          <div class="swiper-slide" ref="Slide1">
+            <img src="~/assets/images/home/p2.jpg" alt="img">
+          </div>
+          <div class="swiper-slide" ref="Slide2">
+            <img src="~/assets/images/home/p3.jpg" alt="img">
+          </div>
+          <div class="swiper-slide" ref="Slide3">
+            <img src="~/assets/images/home/p4.jpg" alt="img">
+          </div>
+        </div>
+        <div class="swiper-button-custom-prev" @click="swiperPrevClick">
+          <img src="~/assets/images/left-btn.svg" alt="img">
+        </div>
+        <div class="swiper-button-custom-next" @click="swiperNextClick">
+          <img src="~/assets/images/right-btn.svg" alt="img">
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+
+    <!--  Title  -->
+    <div class="sens-index-pc-title">
+      <div class="sens-index-pc-title-in">
         <span>公司介绍</span>
       </div>
     </div>
@@ -107,6 +140,8 @@ import {NuxtAxiosInstance} from '@nuxtjs/axios';
 import {useRouter, useRoute} from 'nuxt/app';
 import * as _ from 'lodash';
 
+import Swiper from 'swiper';
+
 const bMapObject = ref<BMapInstance | null>(null);
 const bMapMarkerObject = ref<BMapMarkerInstance | null>(null);
 const bMapCustomLayerObject = ref<BMapCustomLayerInstance | null>(null);
@@ -124,13 +159,13 @@ const initMap = () => {
   //@ts-ignore
   const BMAP_NORMAL_MAP = window.BMAP_NORMAL_MAP;
   const map = new BMapGL.Map('SensLocationMapPc');    // 创建Map实例
-  map.centerAndZoom(new BMapGL.Point(116.367009, 40.079765), 15);
+  map.centerAndZoom(new BMapGL.Point(116.363809, 39.956765), 16);
   map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
   map.setMapType(BMAP_NORMAL_MAP);      // 设置地图类型为地球模式
   // 加载完成
   map.addEventListener('tilesloaded', () => {
     console.log('地图加载完成');
-    const point = new BMapGL.Point(116.367009, 40.079765);
+    const point = new BMapGL.Point(116.363809, 39.95845);
     const myIcon = new BMapGL.Icon(useAsset()[0], new BMapGL.Size(36, 47), {
       // 指定定位位置。
       // 当标注显示在地图上时，其所指向的地理位置距离图标左上
@@ -152,7 +187,7 @@ const initMap = () => {
       div.className = 'bl-point-board';
       div.innerHTML = `
               <span class="bl-point-board-title">北京赴康科技有限公司</span>
-              <span class="bl-point-board-text">北京市昌平区科星西路106号院4号楼14层1407</span>
+              <span class="bl-point-board-text">北京市海淀区北下关街道枫蓝国际B座409A</span>
             `;
       return div;
     }
@@ -171,10 +206,45 @@ const initMap = () => {
   bMapObject.value = map;
 };
 
+let mySwiper: Swiper;
+
+function swiperNextClick(index: number) {
+  mySwiper && mySwiper.slideNext();
+}
+
+function swiperPrevClick(index: number) {
+  mySwiper && mySwiper.slidePrev();
+}
+
 onMounted(() => {
   initMap();
+
+  // 轮播图
+  //@ts-ignore
+  const Swiper: typeof Swiper = window.Swiper;
+
+  setTimeout(() => {
+    mySwiper = new Swiper('.swiper-container', {
+      loop: true, // 无限循环
+      speed: 1000, // 匀速时间
+      slidesPerView: 'auto', // 展示多少张，建议为 auto
+      noSwiping: false, // 禁止拖动，需要指定 swiper-no-swiping 类
+      spaceBetween: 0, // 单位间隔 px
+      autoplay: {
+        delay: 3000, // 无限循环延迟 建议为 0
+        stopOnLastSlide: false, // 停留在最后的一个
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        dynamicBullets: true,
+      },
+      cssMode: false,
+    });
+  }, 100);
 });
 onUnmounted(() => {
+  mySwiper && mySwiper.destroy(false);
   bMapObject.value && bMapMarkerObject.value && bMapObject.value.removeOverlay(bMapMarkerObject.value);
   bMapMarkerObject.value = null;
   bMapObject.value && bMapCustomLayerObject.value && bMapObject.value.removeOverlay(bMapCustomLayerObject.value);
@@ -276,6 +346,43 @@ onUnmounted(() => {
   .sens-index-pc-content {
     display: flex;
     margin-top: 64px;
+
+    .swiper-container{
+      width: 100%;
+      height: 70vw;
+      position: relative;
+
+      :deep(.swiper-pagination-bullet-active) {
+        background: rgba(216, 20, 65, 1);
+      }
+
+      .swiper-button-custom-next, .swiper-button-custom-prev{
+        position: absolute;
+        top: calc(50% - 16px);
+        z-index: 2;
+        cursor: pointer;
+
+        > img {
+          width: 64px;
+          height: 64px;
+        }
+
+        &.swiper-button-custom-next{
+          right: 48px;
+        }
+
+        &.swiper-button-custom-prev{
+          left: 48px;
+        }
+      }
+
+      :deep(.swiper-slide) {
+        > img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
 
     .sens-index-pc-content-left {
       display: flex;
