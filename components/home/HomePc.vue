@@ -97,18 +97,18 @@
     </div>
 
     <!--  Title  -->
-    <div class="sens-index-pc-title">
+    <!-- <div class="sens-index-pc-title">
       <div class="sens-index-pc-title-in">
         <span>联系我们</span>
       </div>
-    </div>
+    </div> -->
 
     <!--  地理位置地图  -->
-    <section class="sens-location">
+    <!-- <section class="sens-location">
       <div class="sens-location-in animate__animated animate__fadeIn" id="SensLocationMapPc">
 
       </div>
-    </section>
+    </section> -->
     <!--  底部Footer  -->
     <GlobalFooter></GlobalFooter>
   </div>
@@ -217,7 +217,7 @@ function swiperPrevClick(index: number) {
 }
 
 onMounted(() => {
-  initMap();
+  // initMap();
 
   // 轮播图
   //@ts-ignore

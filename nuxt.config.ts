@@ -18,26 +18,26 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: "icon", type: "image/x-icon", href: `/favicon.ico` },
-        { rel: 'stylesheet', type: 'text/css', href: `${import.meta.env.VITE_CDN_URL}/css/swiper.min.css`},
-        { rel: 'stylesheet', type: 'text/css', href: `${import.meta.env.VITE_CDN_URL}/css/animate.min.css`}
+        { rel: 'stylesheet', type: 'text/css', href: `https://cdn.bootcdn.net/ajax/libs/Swiper/14.2.0/swiper-bundle.min.css`},
+        { rel: 'stylesheet', type: 'text/css', href: `https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.min.css`}
       ],
       script: [
         {
           type: 'text/javascript',
-          src: `${import.meta.env.VITE_CDN_URL}/js/swiper.min.js`
+          src: `https://cdn.bootcdn.net/ajax/libs/Swiper/14.2.0/swiper-bundle.min.js`
         },
         {
           type: 'text/javascript',
-          src: `${import.meta.env.VITE_CDN_URL}/js/lottie-player.min.js`
+          src: `https://cdn.bootcdn.net/ajax/libs/lottie-player/2.0.12/lottie-player.min.js`
         },
         {
           type: 'text/javascript',
-          src: `${import.meta.env.VITE_CDN_URL}/js/libpag.min.js`
+          src: `https://cdn.jsdelivr.net/npm/libpag@4.1.8/lib/libpag.min.js`
         },
-        {
-          type: 'text/javascript',
-          src: `//api.map.baidu.com/api?type=webgl&v=1.4&ak=${import.meta.env.VITE_BMAP_API_URL}`
-        }
+        // {
+        //   type: 'text/javascript',
+        //   src: `//api.map.baidu.com/api?type=webgl&v=1.4&ak=${import.meta.env.VITE_BMAP_API_URL}`
+        // }
       ]
     }
   },
