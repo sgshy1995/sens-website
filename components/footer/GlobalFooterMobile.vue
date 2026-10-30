@@ -7,17 +7,17 @@
       <div class="sens-footer-right">
         <div>
           <span>公司地址</span>
-          <span>中国 · 北京 海淀区北下关街道枫蓝国际B座409A</span>
+          <span>中国 · 北京 昌平区科星西路106号院4号楼14层1407</span>
           <span>102208</span>
         </div>
         <div>
           <span>合作咨询</span>
-          <span>电话：17862192193</span>
+          <span>电话：19910707615</span>
           <span>邮箱：491987736@qq.com</span>
         </div>
         <div>
           <span>技术咨询</span>
-          <span>电话：15589807093</span>
+          <span>电话：19910707259</span>
           <span>邮箱：singlesaul@163.com</span>
         </div>
       </div>
@@ -26,8 +26,8 @@
       <span>北京赴康科技有限公司版权所有</span>
       <div>
         <a href="https://beian.miit.gov.cn/" target="_blank"> 京ICP备2023005211号</a>
-        <img src="~/assets/images/police.png" alt="police">
-        <a href="https://beian.mps.gov.cn/#/query/webSearch?code=11011402053999" target="_blank">京公网安备11011402053999号</a>
+        <!-- <img src="~/assets/images/police.png" alt="police">
+        <a href="https://beian.mps.gov.cn/#/query/webSearch?code=11011402053999" target="_blank">京公网安备11011402053999号</a> -->
       </div>
     </div>
   </section>
